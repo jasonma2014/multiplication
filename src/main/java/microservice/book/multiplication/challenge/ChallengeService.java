@@ -1,0 +1,10 @@
+package microservice.book.multiplication.challenge;
+
+public interface ChallengeService {
+    /**
+     * Verify if an attempt coming from the presentation layer is correct or not
+     * @return the resulting ChallengeAttempt object
+     */
+    ChallengeAttempt verifyAttempt(ChallengeAttemptDTO resultAttempt);
+
+}
