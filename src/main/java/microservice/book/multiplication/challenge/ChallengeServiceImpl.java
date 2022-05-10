@@ -3,8 +3,6 @@ package microservice.book.multiplication.challenge;
 import microservice.book.multiplication.user.User;
 import org.springframework.stereotype.Service;
 
-import java.util.Calendar;
-
 @Service
 public class ChallengeServiceImpl implements ChallengeService{
     @Override
@@ -13,7 +11,7 @@ public class ChallengeServiceImpl implements ChallengeService{
         boolean isCorrect = attemptDTO.getGuess() ==
                 attemptDTO.getFactorA() * attemptDTO.getFactorB();
         // We don't use identifier for now
-        User user = new User(null, attemptDTO.getUserAlis());
+        User user = new User(null, attemptDTO.getUserAlias());
         // build domain object, null id for now
         ChallengeAttempt checkAttempt = new ChallengeAttempt(
                 null,
